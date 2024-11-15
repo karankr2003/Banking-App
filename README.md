@@ -1,9 +1,8 @@
-<<<<<<< HEAD
+
 # Banking-App
 Mobile Application
-=======
-# CLICK TO WATCH DEMO OF THE APP
-[![Bank App Demo Video](https://i.ytimg.com/vi/Qt9l7ImmQx8/hqdefault.jpg)](https://www.youtube.com/watch?v=Qt9l7ImmQx8&feature=youtu.be)
+
+
 
 # PROJECT DETAILS
 
@@ -36,7 +35,4 @@ The app starts out with a login screen, in which the user can either log in with
 - Resource files are used (best practice) for strings, colors, drawables, styles.
 - Runs on Android API 19 and up
 
-# CURRENTLY IN DEVELOPMENT
 
-While the application is completely functional, it remains somewhat of a work in progress. New libraries, frameworks and features may be implemented down the line for where I see fit. The application will not be posted on the Google Play Store, but will rather be a project I can showcase and practice Android development with Java.
->>>>>>> 7dd7e09 (Initial commit)
