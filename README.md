@@ -1,38 +1,64 @@
-
 # Banking-App
 Mobile Application
 
+## Project Details
 
+A Banking app developed for Android using Android Studio. This is a project to showcase my knowledge and practical skills in Android development with Java. The application follows the MVC architecture and adheres to proper programming conventions, including documentation, error/exception handling, thorough program structure, and memory efficiency.
 
-# PROJECT DETAILS
+### Features
+- **Login and Profile Creation**: The app starts with a login screen where users can log in with an existing profile or create a new one. After logging in, users are taken to their dashboard, where they can create their first account if they are new users.
+- **Navigation Menu**: A sliding menu from the left provides options such as Dashboard, Account Overview, Transactions, Deposits, Payments, Transfers, Profile Settings, and Logout.
 
-A Banking app made for Android using Android Studio. No real money is involved, it is a project to showcase my knowledge and practical skill in Android development with Java. The Application was developed using a MVC approach, using proper programming conventions, including documentation, error/exception handling, thorough program structure and memory efficiency.
+## Android Development Concepts Used
 
-The app starts out with a login screen, in which the user can either log in with an existing profile, or click a button and create a new profile. When signed in, the user will be brought to their dashboard page, which (when first creating a profile), will prompt them to make their first account. Additionally, there is a menu that slides from the left which includes all of the options for the app, including Dashboard, Account Overview (and subsequently Transactions), Deposits, Payments, Transfers, Profile Settings and Logout. 
+### Multiple Activities
+- **Login Activity**: Hosts the fragments for logging in and creating a profile.
+- **Main Activity**: Contains all the features of the app, including account overview, payments, transactions, etc. Activities serve as containers for different fragments and use Intents to pass data between them.
 
-# ANDROID DEVELOPMENT CONCEPTS USED
+### Multiple Fragments
+- Fragments are used to display different views to the user. Bundles are utilized to pass data between fragments.
 
-- Multiple Activities: There are two activities: one which has the fragments for logging in and creating a profile, and the other for hosting all of the features the bank app has, including account overview, payments, transactions, etc. The activites serve as containers for the different fragments throughout the application. Intents are used to pass data from one activity to another. The activities themselves do not display a view, but rather host the navigation code (among other things) to travel between fragments. 
+### Well-Designed UI Layouts
+- Multiple layout files ensure a clean and functional design. Layouts are used for fragments, menus, and custom dialogs.
 
-- Multiple Fragments: What the user actually sees comes from the fragments of the application. These fragments are almost always launched from the activity that wraps them. Bundles are used to pass data from one fragment to another.
+### Custom Toolbar
+- The application uses a consistent custom toolbar throughout, defined in the styles.xml file. The toolbar's title changes based on the current fragment, and it includes options for navigation and a menu.
 
-- Well-desgined UI Layouts: Multiple layout files are used, using a well-thought design that keeps the simplicity of the app, while serving optimal functionality. Most layout files are used for the fragments, while some are used for menus in the application, as well as custom layouts for dialogs.
+### DrawerLayout
+- A DrawerLayout provides a sliding drawer menu from the left side of the screen, containing different features of the app. Each menu option navigates to a fragment or launches a dialog.
 
-- Custom Toolbar: With the application using AppCompat, custom toolbars are a possibility. The toolbar is consistent throughout the app, with the XML code in a styles.xml file for re-use. The toolbar has a title that changes depending on the current fragment in use, and contains options for the user (including an options menu, back navigation, drawer menu).
+### SQLite Database
+- Profile, Account, Payee, and Transaction information are stored in a local SQLite database, consisting of four tables with proper primary and foreign keys.
 
-- DrawerLayout: The application has a DrawerLayout, which is esentially a sliding drawer that typically comes from the left slide of the screen (either by swiping near the left edge or by clicking the hamburger button in the top left of the screen). This menu hosts the different features of the application, with each option either navigation to a fragment (corresponding with the feature), or launching a dialog in some cases. The DrawerLayout is in the second Activity, which serves as the master container for most of the application's fragments.
+### Shared Preferences
+- Used to save and load the current profile's data efficiently. Data is initially loaded from the database and stored in Shared Preferences, updated and accessed across different activities using JSON.
 
-- SQLite Database: All Profile, Account, Payee and Transaction information is stored in a database. The DB consists of four tables, each with a proper primary key (composite or standard) and foreign keys when necessary. The database is stored on the user's device.
+### Array Adapters
+- Custom array adapters display information in ListView and Spinner components, specifically for accounts and transaction types (deposits, transfers, and payments).
 
-- Shared Preferences: Saving the current profile (logged into by the user), and all of its general info, accounts and transactions. When initially logging into a profile, all of the data from that profile is loaded from the database (stores all profile data). This operation is performed once, in which the profile data is stored into Shared Preferences and can be updated and loaded efficiently across the different activities. JSON is involved in the reading and writing of data into Shared Preferences.
+## Notable Mentions
+- The app follows Material Design guidelines, especially with icons, the DrawerLayout, custom toolbar, and 'Add' buttons in fragments.
+- Resource files for strings, colors, drawables, and styles ensure best practices.
+- The app runs on Android API 19 and up.
 
-- Array Adapters: Custom array adapters are used to display information in ListView's and Spinner's. The adapters used are for accounts and all transaction types (deposits, transfers and payments).
+## Installation and Setup
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/karankr2003/Banking-App.git
+    ```
+2. Open the project in Android Studio.
+3. Build and run the app on an Android device or emulator with API 19 or higher.
 
+## Usage
+1. Launch the app on your Android device.
+2. Log in with an existing profile or create a new one.
+3. Navigate through the app using the sliding menu to access different features.
 
-# NOTABLE MENTIONS
-
-- The app follows the Material Design guidelines, most noteably with the icons of the app. Also noticeable in the DrawerLayout, the custom tolbar and the 'Add' buttons in some of the fragments.
-- Resource files are used (best practice) for strings, colors, drawables, styles.
-- Runs on Android API 19 and up
-
+## Contributing
+We welcome contributions to enhance the Banking-App project. If you would like to contribute, please follow these steps:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Create a new Pull Request.
 
